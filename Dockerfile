@@ -103,7 +103,7 @@ EXPOSE 20128
 
 ENTRYPOINT ["/entrypoint.sh"]
 RUN mkdir -p /app/data
-COPY saved_data/data.json /app/data/data.json
+COPY saved_data/db/data.json /app/data/data.json
 CMD ["node", "custom-server.js"]
 
 
