@@ -104,6 +104,11 @@ EXPOSE 20128
 ENTRYPOINT ["/entrypoint.sh"]
 RUN mkdir -p /app/data
 COPY saved_data/db/data.json /app/data/data.json
+COPY render-start.sh /app/render-start.sh
+RUN chmod +x /app/render-start.sh
+
+CMD ["/app/render-start.sh"]
+
 CMD ["node", "custom-server.js"]
 
 
