@@ -103,3 +103,6 @@ EXPOSE 20128
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["node", "custom-server.js"]
+RUN mkdir -p /app/data/db
+COPY saved_data/db/data.sqlite /app/data/db/data.sqlite
+
