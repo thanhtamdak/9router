@@ -102,8 +102,8 @@ RUN apk add --no-cache su-exec ffmpeg && \
 EXPOSE 20128
 
 ENTRYPOINT ["/entrypoint.sh"]
-RUN mkdir -p /app/data/db
-COPY saved_data/db/data.sqlite /app/data/db/data.sqlite
+RUN mkdir -p /app/data
+COPY saved_data/data.json /app/data/data.json
 CMD ["node", "custom-server.js"]
 
 
